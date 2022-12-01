@@ -26,7 +26,7 @@ void fragment() {
 		m_UV.x = 1.0 - m_UV.x;
 	}
 	
-	float distort_ofs = texture(distort_tex, m_UV).r;
+	vec2 distort_ofs = texture(distort_tex, m_UV).rg;
 	
 	// Map offset to [-1, 1] region
 	distort_ofs = (distort_ofs * 2.0) - 1.0;
